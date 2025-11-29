@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import Navigation from '@/components/Navigation';
-import NewsCard from '@/components/NewsCard';
-import BreakingNewsTicker from '@/components/BreakingNewsTicker';
-import CategorySection from '@/components/CategorySection';
-import Footer from '@/components/Footer';
-import ErrorState from '@/components/ErrorState';
+﻿import Head from 'next/head';
+import Navigation from '../components/Navigation';
+import NewsCard from '../components/NewsCard';
+import BreakingNewsTicker from '../components/BreakingNewsTicker';
+import CategorySection from '../components/CategorySection';
+import Footer from '../components/Footer';
+import ErrorState from '../components/ErrorState';
 import { TrendingUp } from 'lucide-react';
 
 export async function getServerSideProps() {
@@ -40,13 +40,13 @@ export default function Home({ topStories, categories, error, fetchedAt }) {
   return (
     <>
       <Head>
-        <title>Live हिंदुस्तान - ताज़ा समाचार, खबरें और अपडेट्स</title>
+        <title>Live à¤¹à¤¿à¤‚à¤¦à¥à¤¸à¥à¤¤à¤¾à¤¨ - à¤¤à¤¾à¤œà¤¼à¤¾ à¤¸à¤®à¤¾à¤šà¤¾à¤°, à¤–à¤¬à¤°à¥‡à¤‚ à¤”à¤° à¤…à¤ªà¤¡à¥‡à¤Ÿà¥à¤¸</title>
         <meta 
           name="description" 
-          content="भारत की सबसे ताज़ा खबरें - राजनीति, व्यापार, मनोरंजन, खेल और अधिक। Live Hindustan पर पढ़ें हिंदी समाचार।" 
+          content="à¤­à¤¾à¤°à¤¤ à¤•à¥€ à¤¸à¤¬à¤¸à¥‡ à¤¤à¤¾à¤œà¤¼à¤¾ à¤–à¤¬à¤°à¥‡à¤‚ - à¤°à¤¾à¤œà¤¨à¥€à¤¤à¤¿, à¤µà¥à¤¯à¤¾à¤ªà¤¾à¤°, à¤®à¤¨à¥‹à¤°à¤‚à¤œà¤¨, à¤–à¥‡à¤² à¤”à¤° à¤…à¤§à¤¿à¤•à¥¤ Live Hindustan à¤ªà¤° à¤ªà¤¢à¤¼à¥‡à¤‚ à¤¹à¤¿à¤‚à¤¦à¥€ à¤¸à¤®à¤¾à¤šà¤¾à¤°à¥¤" 
         />
-        <meta property="og:title" content="Live हिंदुस्तान - भारत का प्रमुख समाचार पोर्टल" />
-        <meta property="og:description" content="ताज़ा हिंदी समाचार और खबरें" />
+        <meta property="og:title" content="Live à¤¹à¤¿à¤‚à¤¦à¥à¤¸à¥à¤¤à¤¾à¤¨ - à¤­à¤¾à¤°à¤¤ à¤•à¤¾ à¤ªà¥à¤°à¤®à¥à¤– à¤¸à¤®à¤¾à¤šà¤¾à¤° à¤ªà¥‹à¤°à¥à¤Ÿà¤²" />
+        <meta property="og:description" content="à¤¤à¤¾à¤œà¤¼à¤¾ à¤¹à¤¿à¤‚à¤¦à¥€ à¤¸à¤®à¤¾à¤šà¤¾à¤° à¤”à¤° à¤–à¤¬à¤°à¥‡à¤‚" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://livehindustan.com" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -59,14 +59,14 @@ export default function Home({ topStories, categories, error, fetchedAt }) {
 
         <main className="max-w-7xl mx-auto px-4 py-8">
           {error ? (
-            <ErrorState message="समाचार लोड करने में समस्या आई। कृपया बाद में प्रयास करें।" />
+            <ErrorState message="à¤¸à¤®à¤¾à¤šà¤¾à¤° à¤²à¥‹à¤¡ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¸à¤®à¤¸à¥à¤¯à¤¾ à¤†à¤ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¬à¤¾à¤¦ à¤®à¥‡à¤‚ à¤ªà¥à¤°à¤¯à¤¾à¤¸ à¤•à¤°à¥‡à¤‚à¥¤" />
           ) : (
             <>
               {/* Hero Section - Top Stories */}
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 flex items-center">
                   <TrendingUp className="w-8 h-8 mr-2 text-primary" />
-                  मुख्य समाचार
+                  à¤®à¥à¤–à¥à¤¯ à¤¸à¤®à¤¾à¤šà¤¾à¤°
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,17 +84,17 @@ export default function Home({ topStories, categories, error, fetchedAt }) {
               {/* Category Sections */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                 <CategorySection 
-                  title="राजनीति" 
+                  title="à¤°à¤¾à¤œà¤¨à¥€à¤¤à¤¿" 
                   articles={categories.politics || []} 
                   color="blue"
                 />
                 <CategorySection 
-                  title="व्यापार" 
+                  title="à¤µà¥à¤¯à¤¾à¤ªà¤¾à¤°" 
                   articles={categories.business || []} 
                   color="green"
                 />
                 <CategorySection 
-                  title="मनोरंजन" 
+                  title="à¤®à¤¨à¥‹à¤°à¤‚à¤œà¤¨" 
                   articles={categories.entertainment || []} 
                   color="purple"
                 />
@@ -103,7 +103,7 @@ export default function Home({ topStories, categories, error, fetchedAt }) {
               {/* More Top Stories */}
               {topStories.length > 3 && (
                 <section className="mb-12">
-                  <h2 className="text-2xl font-bold mb-6">और खबरें</h2>
+                  <h2 className="text-2xl font-bold mb-6">à¤”à¤° à¤–à¤¬à¤°à¥‡à¤‚</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {topStories.slice(3, 7).map((article) => (
                       <NewsCard key={article.id} article={article} size="small" />
@@ -114,7 +114,7 @@ export default function Home({ topStories, categories, error, fetchedAt }) {
 
               {/* Timestamp */}
               <div className="text-center text-xs text-gray-500 mt-8">
-                अंतिम अपडेट: {new Date(fetchedAt).toLocaleString('hi-IN')}
+                à¤…à¤‚à¤¤à¤¿à¤® à¤…à¤ªà¤¡à¥‡à¤Ÿ: {new Date(fetchedAt).toLocaleString('hi-IN')}
               </div>
             </>
           )}
