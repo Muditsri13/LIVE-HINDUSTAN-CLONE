@@ -1,0 +1,29 @@
+[
+{
+"id": "1",
+"title": "India's space mission makes a successful flyby",
+"summary": "A short summary of the mission and its objectives.",
+"image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa",
+"content": "Full article content for article 1.\n\nMore paragraphs...",
+"date": "2025-11-28T08:30:00.000Z",
+"category": "India"
+},
+{
+"id": "2",
+"title": "Local monsoon patterns change — what to expect this year",
+"summary": "Quick take on new meteorological data and what it means.",
+"image": "",
+"content": "Full article content for article 2.\n\nDetails and explanation.",
+"date": "2025-11-27T11:00:00.000Z",
+"category": "Weather"
+},
+{
+"id": "3",
+"title": "Economy shows early signs of recovery with rising exports",
+"summary": "Exports rise 3% driven by manufacturing and services.",
+"image": "https://picsum.photos/800/450",
+"content": "Full article content for article 3.",
+"date": "2025-11-26T09:20:00.000Z",
+"category": "Business"
+}
+]
